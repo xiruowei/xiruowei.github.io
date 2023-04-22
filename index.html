@@ -1,41 +1,106 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>席若为的个人网站</title>
-  </head>
-  <body style="margin: 0;">
-    <div style="
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 40px;
-    "
-    >
-      <img alt="席若为" src="https://s1.328888.xyz/2022/06/03/W4X0P.jpg" width="150xp">
-      <p>席若为的个人网站</p>
-      <p>(#^.^#)</p>
-    </div>
-    <div style="
-    mix-width: 760px;
-    msrgin: 30px auto;
-    padding: 15px;
-    line-height: 1.7;
-    "
-    >
-    <p>不知道说点啥——无语ヽ(ー_ー)ノ</p>
-    <p>(凑活一下)</p>
-    <p>学生党 初中生 二次元热爱者 中二少年</p>
-    <p>暂时就这样吧</p>
-    </div> 
-    <div style="
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 40px;
-    font-size: 15px;
-    "
-    >
-    <p>版权所有：席若为</p>
-    </div>
-  </body>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人网站</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css"> <!-- 将CSS文件链接放在头部 -->
+</head>
+
+<body>
+  <script src="./app.js"></script>
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+
+  <header class="hidden">
+    <nav>
+      <ul>
+        <li><a href="#about-me">关于我</a></li>
+        <li><a href="#blog">博客</a></li>
+        <li><a href="#portfolio">作品集</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hidden">
+    <section id="about-me">
+      <h1>关于我</h1>
+      <img src="avatar.jpg" alt="我的头像">
+      <p>你好，我是席若为，一名前端开发者。我热爱编程和设计，并且喜欢不断学习新的技能。</p>
+    </section>
+
+    <section id="blog">
+      <h2>最新博客</h2>
+      <ul>
+        <li>
+          <a href="#">文章标题1</a>
+          <p>文章描述或摘要1</p>
+        </li>
+        <li>
+          <a href="#">文章标题2</a>
+          <p>文章描述或摘要2</p>
+        </li>
+        <li>
+          <a href="#">文章标题3</a>
+          <p>文章描述或摘要3</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="portfolio">
+      <h2>作品集</h2>
+      <ul>
+        <li>
+          <div class="project-container">
+            <a href="#">
+              <img src="project1.jpg" alt="项目1">
+            </a>
+          </div>
+          <p>项目1名称</p>
+        </li>
+        <li>
+          <div class="project-container">
+            <a href="#">
+              <img src="project2.jpg" alt="项目2">
+            </a>
+          </div>
+          <p>项目2名称</p>
+        </li>
+        <li>
+          <div class="project-container">
+            <a href="#">
+              <img src="project3.jpg" alt="项目3">
+            </a>
+          </div>
+          <p>项目3名称</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>联系我</h2>
+      <form action="submit-form.php" method="POST">
+        <label for="name">姓名：</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">邮箱：</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">留言：</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">发送</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="hidden">
+    <p>&copy; 2023 XXX. All rights reserved.</p>
+  </footer>
+
+  <script defer src="scripts/main.js"></script> <!-- 将JavaScript代码放在底部 -->
+</body>
 </html>
